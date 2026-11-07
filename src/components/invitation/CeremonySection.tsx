@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Calendar, CalendarPlus, ChevronRight, ExternalLink, MapPin, Sparkles, X } from "lucide-react";
+import { Calendar, CalendarPlus, ChevronRight, MapPin, Sparkles, X } from "lucide-react";
 import Reveal from "./Reveal";
-import ramayanImg from "@/assets/card-ramayan.png.asset.json";
-import haldiImg from "@/assets/card-haldi.png.asset.json";
-import pherasImg from "@/assets/card-pheras.png.asset.json";
-import vidaaiImg from "@/assets/card-vidaai.png.asset.json";
+import cardMehndi from "@/assets/card-mehndi.jpg";
+import cardHaldiBride from "@/assets/card-haldi-bride.jpg";
+import cardShadi from "@/assets/card-shadi.jpg";
+import cardVidaai from "@/assets/card-vidaai.png.asset.json";
 
 export type Ceremony = {
   id: string;
@@ -35,11 +35,11 @@ const CEREMONIES: Ceremony[] = [
     addressShort: "Gorakhpur, Uttar Pradesh",
     details:
       "Intricate henna adornments, joyful sangeet melodies, and festive blessings for our beloved bride Nidhi.",
-    image: ramayanImg.url,
+    image: cardMehndi,
     mapsUrl: MAPS_URL,
     calendarUrl:
       "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Shubh+Mehndi+Ceremony+-+Nidhi+weds+Neeraj&dates=20261204T170000/20261204T220000&details=Shubh+Mehndi+Ceremony+at+Bride%27s+Residence.+Celebrations+begin+at+5:00+PM.&location=Bride%27s+Residence,+Gorakhpur",
-    overlayClasses: "inset-x-[6%] sm:inset-x-[8%] top-[40%] bottom-[25%]",
+    overlayClasses: "inset-x-[8%] sm:inset-x-[10%] top-[20%] bottom-[42%]",
   },
   {
     id: "haldi",
@@ -49,12 +49,12 @@ const CEREMONIES: Ceremony[] = [
     time: "Morning, 10:00 AM onwards",
     venue: "Sumangalam Resort",
     addressShort: "Transport Nagar, Pathra Tola, Shivpuri New Colony, Gorakhpur",
-    details: "Sacred turmeric blessings, traditional music, and joyful pre-wedding celebrations.",
-    image: haldiImg.url,
+    details: "Sacred turmeric blessings, traditional songs, and cheerful pre-wedding celebrations.",
+    image: cardHaldiBride,
     mapsUrl: MAPS_URL,
     calendarUrl:
       "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Auspicious+Haldi+Ceremony+-+Nidhi+weds+Neeraj&dates=20261206T100000/20261206T140000&details=Auspicious+Haldi+Ceremony+at+Sumangalam+Resort.&location=Sumangalam+Resort,+Transport+Nagar,+Pathra+Tola,+Shivpuri+New+Colony,+Gorakhpur",
-    overlayClasses: "inset-x-[8%] sm:inset-x-[10%] top-[23%] bottom-[27%]",
+    overlayClasses: "inset-x-[8%] sm:inset-x-[10%] top-[20%] bottom-[42%]",
   },
   {
     id: "pheras",
@@ -66,22 +66,22 @@ const CEREMONIES: Ceremony[] = [
     venue: "Sumangalam Resort",
     addressShort: "Transport Nagar, Pathra Tola, Shivpuri New Colony, Gorakhpur",
     details: "Grand reception of the Baarat, auspicious Varmala, and sacred nuptial vows around the holy agni.",
-    image: pherasImg.url,
+    image: cardShadi,
     mapsUrl: MAPS_URL,
     calendarUrl:
       "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Ceremony+%26+Sacred+Pheras+-+Nidhi+weds+Neeraj&dates=20261206T190000/20261207T040000&details=Wedding+ceremony+and+sacred+pheras+of+Nidhi+and+Neeraj.&location=Sumangalam+Resort,+Transport+Nagar,+Pathra+Tola,+Shivpuri+New+Colony,+Gorakhpur",
-    overlayClasses: "inset-x-[8%] sm:inset-x-[10%] top-[23%] bottom-[49%]",
+    overlayClasses: "inset-x-[8%] sm:inset-x-[10%] top-[19%] bottom-[43%]",
   },
   {
     id: "vidaai",
     name: "Milni and Bidaai Ceremony",
     devanagariTag: "॥ मिलनी एवं विदाई ॥",
     date: "Monday, 7 December 2026",
-    time: "Early morning",
+    time: "Morning",
     venue: "Sumangalam Resort",
     addressShort: "Gorakhpur, Uttar Pradesh",
     details: "Heartfelt Milni followed by loving blessings and emotional farewell as Nidhi embarks on her new journey with Neeraj.",
-    image: vidaaiImg.url,
+    image: cardVidaai.url,
     mapsUrl: MAPS_URL,
     calendarUrl:
       "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Milni+and+Bidaai+-+Nidhi+weds+Neeraj&dates=20261207T070000/20261207T110000&details=Milni+and+Bidaai+ceremony+at+Sumangalam+Resort.&location=Sumangalam+Resort,+Gorakhpur",
@@ -101,17 +101,17 @@ function CeremonyCard({
   return (
     <Reveal delay={(index % 2) * 120}>
       <div className="group flex flex-col h-full rounded-2xl border border-primary/40 bg-card shadow-xl transition-all duration-300 hover:shadow-2xl hover:border-primary/60">
-        {/* ── CARD ARTWORK: Uniform aspect-[9/16] ── */}
+        {/* ── CARD ARTWORK: Proportionate to 738x1040 original artwork ── */}
         <div
           onClick={() => onOpenModal(c)}
-          className="relative aspect-[9/16] w-full overflow-hidden rounded-t-2xl bg-secondary/30 cursor-pointer"
+          className="relative aspect-[738/1040] w-full overflow-hidden rounded-t-2xl bg-secondary/30 cursor-pointer"
         >
           <img
             src={c.image}
             alt={c.name}
             loading="lazy"
-            width={900}
-            height={1600}
+            width={738}
+            height={1040}
             className="w-full h-full object-cover object-center block transition-transform duration-500 group-hover:scale-[1.02]"
           />
 

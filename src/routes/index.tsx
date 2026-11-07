@@ -21,8 +21,9 @@ import Countdown from "@/components/invitation/Countdown";
 import ScratchCard from "@/components/invitation/ScratchCard";
 import Reveal from "@/components/invitation/Reveal";
 import CeremonySection from "@/components/invitation/CeremonySection";
-import mainCard from "@/assets/card-main.png.asset.json";
-import baaratCard from "@/assets/card-baarat.png.asset.json";
+import cardShadi from "@/assets/card-shadi.jpg";
+import cardVenueLocation from "@/assets/card-venue-location.jpg";
+import cardRegardsFormal from "@/assets/card-regards-formal.jpg";
 import introVideo from "@/assets/intro-video.mp4.asset.json";
 import nnLogo from "@/assets/nn-logo.png";
 import closingCouplePhoto from "@/assets/closing-couple.jpg";
@@ -37,7 +38,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "With the divine blessings of the Almighty, Shri Awadh Narayan Gupta cordially invites you to the wedding of beloved daughter Aayu. Nidhi Gupta with Chi. Neeraj Gupta on Sunday, 6 December 2026 at Sumangalam Resort, Gorakhpur.",
+          "With the divine blessings of the Almighty, Shri Awadh Narayan Gupta cordially invites you to celebrate the wedding of beloved daughter Aayu. Nidhi Gupta with Chi. Neeraj Gupta on Sunday, 6 December 2026 at Sumangalam Resort, Gorakhpur.",
       },
       {
         property: "og:title",
@@ -46,7 +47,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Wedding celebrations from 4 to 7 December 2026: Mehndi at Bride's Home, Haldi, Shubh Vivah & Bidaai at Sumangalam Resort, Gorakhpur.",
+          "Wedding celebrations from 4 to 7 December 2026: Mehndi at Bride's Home, Haldi, Shubh Vivah & Bidaai at Sumangalam Resort, Gorakhpur. Tap to open your invitation.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -208,34 +209,34 @@ function Index() {
           opened ? "opacity-100" : "opacity-0"
         )}
       >
-        {/* ── Hero: The Main Royal Invitation Card ─────────────────────────── */}
+        {/* ── Hero: The Main Royal Invitation Card (New Shadi Artwork from User) ── */}
         <section className="px-4 pb-6 pt-8">
           <Reveal>
             <div className="relative mx-auto max-w-lg overflow-hidden rounded-2xl shadow-2xl ring-1 ring-primary/40 bg-card">
               <img
-                src={mainCard.url}
-                alt="Wedding invitation card artwork with floral archway and auspicious bells"
-                className="block h-auto w-full"
-                width={900}
-                height={1600}
+                src={cardShadi}
+                alt="Nidhi weds Neeraj Shadi wedding invitation artwork"
+                className="block h-auto w-full object-cover"
+                width={738}
+                height={1040}
               />
               {/* Text placed inside the archway of the artwork */}
-              <div className="absolute inset-x-[12%] sm:inset-x-[14%] top-[16%] bottom-[30%] flex flex-col items-center justify-center text-center p-2 select-none">
-                <p className="font-serif text-sm sm:text-lg text-accent font-bold drop-shadow-xs">
+              <div className="absolute inset-x-[12%] sm:inset-x-[14%] top-[14%] bottom-[42%] flex flex-col items-center justify-center text-center p-2 select-none">
+                <p className="font-serif text-xs sm:text-base text-accent font-bold drop-shadow-xs">
                   ॥ श्री गणेशाय नमः ॥
                 </p>
                 <p className="mt-1 max-w-[34ch] text-[10px] sm:text-xs leading-relaxed text-foreground/85 font-semibold">
                   मंगलम भगवान विष्णु मंगलम गरुडध्वज ।<br />
                   मंगलम पुण्डरीकाक्षः मंगलाय तनो हरि ॥
                 </p>
-                <p className="mt-2.5 sm:mt-3 text-[10px] sm:text-xs uppercase tracking-[0.35em] text-accent font-bold">
+                <p className="mt-2 text-[10px] sm:text-xs uppercase tracking-[0.35em] text-accent font-bold">
                   Shubh Vivahotsav
                 </p>
-                <h1 className="mt-1 sm:mt-2 font-display text-2xl sm:text-4xl md:text-5xl leading-tight text-foreground font-extrabold tracking-wide drop-shadow-xs">
+                <h1 className="mt-0.5 sm:mt-1 font-display text-2xl sm:text-4xl leading-tight text-foreground font-extrabold tracking-wide drop-shadow-xs">
                   Nidhi weds Neeraj
                 </h1>
-                <div className="mt-2 sm:mt-3 h-px w-20 sm:w-28 bg-primary/70" aria-hidden="true" />
-                <p className="mt-2 sm:mt-3 text-sm sm:text-lg font-bold tracking-wide text-foreground">
+                <div className="mt-1.5 sm:mt-2 h-px w-20 sm:w-28 bg-primary/70" aria-hidden="true" />
+                <p className="mt-1.5 sm:mt-2 text-sm sm:text-base font-bold tracking-wide text-foreground">
                   Sunday, 6 December 2026
                 </p>
                 <a
@@ -243,9 +244,9 @@ function Index() {
                   target="_blank"
                   rel="noreferrer"
                   title="Open Sumangalam Resort in Google Maps"
-                  className="mt-0.5 sm:mt-1 text-[11px] sm:text-sm text-muted-foreground hover:text-accent flex items-center justify-center gap-1 font-semibold transition-colors"
+                  className="mt-0.5 text-[11px] sm:text-xs text-muted-foreground hover:text-accent flex items-center justify-center gap-1 font-semibold transition-colors"
                 >
-                  <MapPin className="h-3.5 w-3.5 text-primary inline" /> Sumangalam Resort, Gorakhpur
+                  <MapPin className="h-3 w-3 text-primary inline" /> Sumangalam Resort, Gorakhpur
                 </a>
               </div>
             </div>
@@ -303,14 +304,14 @@ function Index() {
           </Reveal>
         </section>
 
-        {/* ── Formal Invitation (From Bride's Parents & Family) ────────────── */}
+        {/* ── Formal Invitation (From Bride's Parents & Family - PDF Page 2) ── */}
         <section className="px-4 sm:px-6 pb-6">
           <Reveal>
             <div className="mx-auto max-w-xl rounded-2xl border border-primary/40 bg-card p-6 text-center shadow-xl sm:p-10">
               <p className="font-serif text-xs sm:text-sm tracking-[0.3em] uppercase text-accent font-bold">
                 ॥ श्री गणेशाय नमः ॥
               </p>
-              <p className="mt-1 font-serif text-sm sm:text-base text-foreground/90 font-medium">
+              <p className="mt-1 font-serif text-sm sm:text-base text-foreground/90 font-medium leading-relaxed">
                 मंगलम भगवान विष्णु मंगलम गरुडध्वज ।<br />
                 मंगलम पुण्डरीकाक्षः मंगलाय तनो हरि ॥
               </p>
@@ -382,28 +383,28 @@ function Index() {
           </Reveal>
         </section>
 
-        {/* ── Auspicious Ceremonies (Mehndi, Haldi, Wedding & Pheras, Milni & Bidaai) ── */}
+        {/* ── Auspicious Ceremonies (New Mehndi, Haldi, Shadi & Bidaai Backgrounds) ── */}
         <CeremonySection />
 
-        {/* ── Baarat Welcome & Venue ────────────────────────────────────────── */}
+        {/* ── Venue & Location Card ("Isme location and all" Background from User) ── */}
         <section className="px-4 sm:px-6 py-10">
           <Reveal>
             <div className="mx-auto max-w-lg overflow-hidden rounded-2xl border border-primary/40 bg-card shadow-2xl">
-              <div className="relative aspect-[9/16] w-full overflow-hidden bg-secondary/30">
+              <div className="relative aspect-[738/1040] w-full overflow-hidden bg-secondary/30">
                 <img
-                  src={baaratCard.url}
-                  alt="Watercolour procession celebrating the arrival of the Baarat"
+                  src={cardVenueLocation}
+                  alt="Scenic mountain garden pavilion artwork for wedding location"
                   loading="lazy"
-                  width={900}
-                  height={1600}
+                  width={738}
+                  height={1040}
                   className="w-full h-full object-cover object-center block"
                 />
-                <div className="absolute inset-x-[8%] top-[8%] bottom-[54%] flex flex-col items-center justify-center text-center p-2 select-none">
+                <div className="absolute inset-x-[8%] top-[16%] bottom-[45%] flex flex-col items-center justify-center text-center p-2 select-none">
                   <p className="font-serif text-xs sm:text-sm tracking-[0.3em] uppercase text-accent font-bold drop-shadow-xs">
-                    ॥ बारात स्वागत ॥
+                    ॥ शुभ विवाह स्थल ॥
                   </p>
                   <h2 className="mt-1 font-display text-2xl sm:text-3xl md:text-4xl leading-tight text-foreground font-bold drop-shadow-xs">
-                    The Baarat Reception
+                    The Wedding Venue
                   </h2>
                   <div className="my-2 flex items-center justify-center gap-2 w-28" aria-hidden="true">
                     <span className="h-px flex-1 bg-primary/70" />
@@ -463,68 +464,94 @@ function Index() {
           </Reveal>
         </section>
 
-        {/* ── With Best Wishes From & Loving Siblings (Page 3 of Card) ─────── */}
+        {/* ── With Best Regards & Compliments ("Isme with best regards" Background from User) ── */}
         <section className="px-4 sm:px-6 py-10 text-center">
           <Reveal>
-            <div className="mx-auto max-w-xl rounded-2xl border border-primary/40 bg-card p-6 sm:p-10 shadow-xl space-y-6">
-              
-              {/* Best Wishes From */}
-              <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-accent font-bold">
-                  Blessings &amp; Regards
-                </p>
-                <h2 className="mt-2 font-display text-2xl sm:text-3xl text-foreground font-bold tracking-wide">
-                  With Best Wishes From:
-                </h2>
-                <GoldDivider />
-                <p className="mt-3 text-sm sm:text-base leading-relaxed text-foreground/90 font-serif font-medium">
-                  Keshav, Bhairav, Pappu, Santosh, Mahajan, Baijnath, Durga, Ramesh, Rahul, Titir, Rajesh, Deepak, Pradeep, Anil, Sanjay, Manish, Amit, Ajay,
-                </p>
-                <p className="mt-2 text-xs sm:text-sm font-serif tracking-wider uppercase text-accent font-bold">
-                  and the entire Kasodhan family, relatives, and friends.
-                </p>
-              </div>
+            <div className="mx-auto max-w-lg overflow-hidden rounded-2xl border border-primary/40 bg-card shadow-2xl">
+              <div className="relative aspect-[738/1040] w-full overflow-hidden bg-secondary/30">
+                <img
+                  src={cardRegardsFormal}
+                  alt="Royal arch artwork for with best regards and family wishes"
+                  loading="lazy"
+                  width={738}
+                  height={1040}
+                  className="w-full h-full object-cover object-center block"
+                />
+                
+                {/* Text inside the royal arch */}
+                <div className="absolute inset-x-[10%] top-[14%] bottom-[30%] flex flex-col items-center justify-between text-center p-3 sm:p-5 select-none">
+                  <div>
+                    <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-accent font-bold">
+                      ॥ सप्रेम स्नेह व आशीर्वाद ॥
+                    </p>
+                    <h2 className="mt-1 font-display text-2xl sm:text-3xl text-foreground font-bold tracking-wide">
+                      With Best Regards
+                    </h2>
+                    <div className="my-1.5 flex items-center justify-center gap-2 w-24 mx-auto" aria-hidden="true">
+                      <span className="h-px flex-1 bg-primary/70" />
+                      <Sparkles className="h-3 w-3 text-primary" />
+                      <span className="h-px flex-1 bg-primary/70" />
+                    </div>
+                  </div>
 
-              {/* Young Siblings Poem */}
-              <div className="rounded-xl border border-primary/30 bg-secondary/50 p-5 text-center">
-                <p className="font-serif italic text-sm sm:text-base text-foreground/90 leading-relaxed">
-                  "The moon will rise with a twinkle,<br />
-                  the stars will smile with joy,<br />
-                  Our hearts will be filled with happiness<br />
-                  if you join us for the wedding of my dear sister."
-                </p>
-                <div className="mt-3 flex flex-wrap justify-center gap-1.5 text-xs sm:text-sm font-serif font-bold text-accent">
-                  <span>Nitya,</span>
-                  <span>Aarvi,</span>
-                  <span>Navya,</span>
-                  <span>Arnav,</span>
-                  <span>Harsh,</span>
-                  <span>Kittu,</span>
-                  <span>Aarvi,</span>
-                  <span>Riyansh</span>
+                  {/* Highlighted Names from user message */}
+                  <div className="space-y-1 my-auto">
+                    <p className="font-serif text-xl sm:text-2xl font-bold text-foreground">
+                      Shri Awadh Narayan Gupta
+                    </p>
+                    <p className="font-serif text-lg sm:text-xl font-bold text-accent">
+                      Nitin Awadh Narayan Gupta
+                    </p>
+                    <p className="font-serif text-sm sm:text-base font-semibold text-foreground/90">
+                      Riya Awadh Narayan Gupta
+                    </p>
+                  </div>
+
+                  {/* Sibling bond note */}
+                  <div>
+                    <p className="text-[11px] sm:text-xs uppercase tracking-wider text-muted-foreground font-semibold">
+                      Forever siblings, forever together
+                    </p>
+                    <p className="text-[10px] sm:text-xs font-serif text-accent font-bold mt-1">
+                      &amp; The Entire Kasodhan Family, Relatives &amp; Friends
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              {/* Forever Siblings */}
-              <div className="pt-2">
-                <p className="font-serif italic text-xs sm:text-sm text-accent font-semibold tracking-wider">
-                  ✦ Forever siblings, forever together ✦
-                </p>
-                <div className="mt-2 space-y-1">
-                  <p className="font-display text-lg sm:text-xl font-bold text-foreground">
-                    Nitin Awadh Narayan Gupta
+              {/* Extended wishes, young siblings poem & relatives list */}
+              <div className="border-t border-primary/20 bg-secondary/50 p-5 sm:p-7 text-center space-y-4">
+                <div>
+                  <p className="text-xs font-serif font-bold tracking-wider uppercase text-accent">
+                    With Best Wishes From:
                   </p>
-                  <p className="font-display text-lg sm:text-xl font-bold text-foreground">
-                    Riya Awadh Narayan Gupta
+                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-foreground/90 font-serif font-medium">
+                    Keshav, Bhairav, Pappu, Santosh, Mahajan, Baijnath, Durga, Ramesh, Rahul, Titir, Rajesh, Deepak, Pradeep, Anil, Sanjay, Manish, Amit, Ajay
                   </p>
                 </div>
-              </div>
 
+                <div className="rounded-xl border border-primary/30 bg-card p-4 text-center">
+                  <p className="font-serif italic text-xs sm:text-sm text-foreground/90 leading-relaxed">
+                    "The moon will rise with a twinkle, the stars will smile with joy,<br />
+                    Our hearts will be filled with happiness if you join us for the wedding of my dear sister."
+                  </p>
+                  <div className="mt-2.5 flex flex-wrap justify-center gap-1.5 text-xs font-serif font-bold text-accent">
+                    <span>Nitya,</span>
+                    <span>Aarvi,</span>
+                    <span>Navya,</span>
+                    <span>Arnav,</span>
+                    <span>Harsh,</span>
+                    <span>Kittu,</span>
+                    <span>Aarvi,</span>
+                    <span>Riyansh</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </Reveal>
         </section>
 
-        {/* ── Contact Section (From Bride's Father) ────────────────────────── */}
+        {/* ── Contact Section (From Bride's Father - PDF Page 1) ───────────── */}
         <section className="px-4 sm:px-6 pb-12 pt-4">
           <Reveal>
             <div className="mx-auto max-w-xl rounded-2xl border border-primary/40 bg-card p-6 text-center shadow-xl sm:p-8">
