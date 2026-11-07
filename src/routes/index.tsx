@@ -221,22 +221,22 @@ function Index() {
                 height={1040}
               />
               {/* Text placed inside the archway of the artwork */}
-              <div className="absolute inset-x-[12%] sm:inset-x-[14%] top-[14%] bottom-[42%] flex flex-col items-center justify-center text-center p-2 select-none">
-                <p className="font-serif text-xs sm:text-base text-accent font-bold drop-shadow-xs">
+              <div className="absolute inset-x-[10%] sm:inset-x-[14%] top-[25%] bottom-[35%] flex flex-col items-center justify-center text-center p-2 select-none">
+                <p className="font-serif text-xs sm:text-sm text-accent font-bold uppercase tracking-[0.25em] drop-shadow-xs">
                   ॥ श्री गणेशाय नमः ॥
                 </p>
-                <p className="mt-1 max-w-[34ch] text-[10px] sm:text-xs leading-relaxed text-foreground/85 font-semibold">
+                <p className="mt-1 max-w-[34ch] text-[10px] sm:text-xs leading-relaxed text-[#2c1015]/90 font-semibold">
                   मंगलम भगवान विष्णु मंगलम गरुडध्वज ।<br />
                   मंगलम पुण्डरीकाक्षः मंगलाय तनो हरि ॥
                 </p>
-                <p className="mt-2 text-[10px] sm:text-xs uppercase tracking-[0.35em] text-accent font-bold">
+                <p className="mt-1.5 text-[10px] sm:text-xs uppercase tracking-[0.35em] text-accent font-bold">
                   Shubh Vivahotsav
                 </p>
-                <h1 className="mt-0.5 sm:mt-1 font-display text-2xl sm:text-4xl leading-tight text-foreground font-extrabold tracking-wide drop-shadow-xs">
+                <h1 className="mt-0.5 sm:mt-1 font-display text-xl sm:text-3xl leading-tight text-[#2c1015] font-extrabold tracking-wide drop-shadow-xs">
                   Nidhi weds Neeraj
                 </h1>
-                <div className="mt-1.5 sm:mt-2 h-px w-20 sm:w-28 bg-primary/70" aria-hidden="true" />
-                <p className="mt-1.5 sm:mt-2 text-sm sm:text-base font-bold tracking-wide text-foreground">
+                <div className="my-1.5 sm:my-2 h-px w-20 sm:w-28 bg-primary/70" aria-hidden="true" />
+                <p className="font-serif text-xs sm:text-sm md:text-base font-bold tracking-wide text-accent drop-shadow-xs">
                   Sunday, 6 December 2026
                 </p>
                 <a
@@ -244,7 +244,7 @@ function Index() {
                   target="_blank"
                   rel="noreferrer"
                   title="Open Sumangalam Resort in Google Maps"
-                  className="mt-0.5 text-[11px] sm:text-xs text-muted-foreground hover:text-accent flex items-center justify-center gap-1 font-semibold transition-colors"
+                  className="mt-1 text-[11px] sm:text-xs text-[#2c1015] hover:text-accent flex items-center justify-center gap-1 font-bold transition-colors"
                 >
                   <MapPin className="h-3 w-3 text-primary inline" /> Sumangalam Resort, Gorakhpur
                 </a>
@@ -399,11 +399,11 @@ function Index() {
                   height={1040}
                   className="w-full h-full object-cover object-center block"
                 />
-                <div className="absolute inset-x-[8%] top-[16%] bottom-[45%] flex flex-col items-center justify-center text-center p-2 select-none">
+                <div className="absolute inset-x-[8%] sm:inset-x-[12%] top-[24%] bottom-[32%] flex flex-col items-center justify-center text-center p-2 select-none">
                   <p className="font-serif text-xs sm:text-sm tracking-[0.3em] uppercase text-accent font-bold drop-shadow-xs">
                     ॥ शुभ विवाह स्थल ॥
                   </p>
-                  <h2 className="mt-1 font-display text-2xl sm:text-3xl md:text-4xl leading-tight text-foreground font-bold drop-shadow-xs">
+                  <h2 className="mt-1 font-display text-xl sm:text-3xl md:text-4xl leading-tight text-[#2c1015] font-extrabold drop-shadow-xs max-w-[18ch]">
                     The Wedding Venue
                   </h2>
                   <div className="my-2 flex items-center justify-center gap-2 w-28" aria-hidden="true">
@@ -414,7 +414,7 @@ function Index() {
                   <p className="font-serif text-sm sm:text-base md:text-lg font-bold tracking-wide text-accent drop-shadow-xs">
                     Sunday, 6 December 2026 · 7:00 PM
                   </p>
-                  <p className="mt-1 max-w-[32ch] text-xs sm:text-sm text-foreground/90 font-semibold">
+                  <p className="mt-1 max-w-[32ch] text-xs sm:text-sm text-[#2c1015]/90 font-bold leading-relaxed">
                     Cordially Welcoming the Groom, Baarat &amp; Kasodhan Family at Sumangalam Resort
                   </p>
                 </div>
@@ -479,12 +479,12 @@ function Index() {
                 />
                 
                 {/* Text inside the royal arch */}
-                <div className="absolute inset-x-[10%] top-[14%] bottom-[30%] flex flex-col items-center justify-between text-center p-3 sm:p-5 select-none">
+                <div className="absolute inset-x-[10%] sm:inset-x-[14%] top-[25%] bottom-[22%] flex flex-col items-center justify-between text-center p-3 sm:p-5 select-none">
                   <div>
                     <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-accent font-bold">
                       ॥ सप्रेम स्नेह व आशीर्वाद ॥
                     </p>
-                    <h2 className="mt-1 font-display text-2xl sm:text-3xl text-foreground font-bold tracking-wide">
+                    <h2 className="mt-1 font-display text-xl sm:text-2xl md:text-3xl text-[#2c1015] font-extrabold tracking-wide">
                       With Best Regards
                     </h2>
                     <div className="my-1.5 flex items-center justify-center gap-2 w-24 mx-auto" aria-hidden="true">
@@ -495,21 +495,21 @@ function Index() {
                   </div>
 
                   {/* Highlighted Names from user message */}
-                  <div className="space-y-1 my-auto">
-                    <p className="font-serif text-xl sm:text-2xl font-bold text-foreground">
+                  <div className="space-y-1.5 my-auto">
+                    <p className="font-serif text-lg sm:text-2xl font-bold text-[#2c1015]">
                       Shri Awadh Narayan Gupta
                     </p>
-                    <p className="font-serif text-lg sm:text-xl font-bold text-accent">
+                    <p className="font-serif text-base sm:text-xl font-bold text-accent">
                       Nitin Awadh Narayan Gupta
                     </p>
-                    <p className="font-serif text-sm sm:text-base font-semibold text-foreground/90">
+                    <p className="font-serif text-sm sm:text-base font-semibold text-[#2c1015]/90">
                       Riya Awadh Narayan Gupta
                     </p>
                   </div>
 
                   {/* Sibling bond note */}
                   <div>
-                    <p className="text-[11px] sm:text-xs uppercase tracking-wider text-muted-foreground font-semibold">
+                    <p className="text-[10px] sm:text-xs uppercase tracking-wider text-[#2c1015]/80 font-bold">
                       Forever siblings, forever together
                     </p>
                     <p className="text-[10px] sm:text-xs font-serif text-accent font-bold mt-1">

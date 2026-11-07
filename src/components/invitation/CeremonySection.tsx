@@ -39,7 +39,7 @@ const CEREMONIES: Ceremony[] = [
     mapsUrl: MAPS_URL,
     calendarUrl:
       "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Shubh+Mehndi+Ceremony+-+Nidhi+weds+Neeraj&dates=20261204T170000/20261204T220000&details=Shubh+Mehndi+Ceremony+at+Bride%27s+Residence.+Celebrations+begin+at+5:00+PM.&location=Bride%27s+Residence,+Gorakhpur",
-    overlayClasses: "inset-x-[8%] sm:inset-x-[10%] top-[20%] bottom-[42%]",
+    overlayClasses: "inset-x-[10%] sm:inset-x-[14%] top-[27%] bottom-[35%]",
   },
   {
     id: "haldi",
@@ -54,7 +54,7 @@ const CEREMONIES: Ceremony[] = [
     mapsUrl: MAPS_URL,
     calendarUrl:
       "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Auspicious+Haldi+Ceremony+-+Nidhi+weds+Neeraj&dates=20261206T100000/20261206T140000&details=Auspicious+Haldi+Ceremony+at+Sumangalam+Resort.&location=Sumangalam+Resort,+Transport+Nagar,+Pathra+Tola,+Shivpuri+New+Colony,+Gorakhpur",
-    overlayClasses: "inset-x-[8%] sm:inset-x-[10%] top-[20%] bottom-[42%]",
+    overlayClasses: "inset-x-[10%] sm:inset-x-[14%] top-[27%] bottom-[35%]",
   },
   {
     id: "pheras",
@@ -70,7 +70,7 @@ const CEREMONIES: Ceremony[] = [
     mapsUrl: MAPS_URL,
     calendarUrl:
       "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Ceremony+%26+Sacred+Pheras+-+Nidhi+weds+Neeraj&dates=20261206T190000/20261207T040000&details=Wedding+ceremony+and+sacred+pheras+of+Nidhi+and+Neeraj.&location=Sumangalam+Resort,+Transport+Nagar,+Pathra+Tola,+Shivpuri+New+Colony,+Gorakhpur",
-    overlayClasses: "inset-x-[8%] sm:inset-x-[10%] top-[19%] bottom-[43%]",
+    overlayClasses: "inset-x-[10%] sm:inset-x-[14%] top-[27%] bottom-[35%]",
   },
   {
     id: "vidaai",
@@ -85,7 +85,7 @@ const CEREMONIES: Ceremony[] = [
     mapsUrl: MAPS_URL,
     calendarUrl:
       "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Milni+and+Bidaai+-+Nidhi+weds+Neeraj&dates=20261207T070000/20261207T110000&details=Milni+and+Bidaai+ceremony+at+Sumangalam+Resort.&location=Sumangalam+Resort,+Gorakhpur",
-    overlayClasses: "inset-x-[10%] sm:inset-x-[12%] top-[19%] bottom-[33%]",
+    overlayClasses: "inset-x-[8%] sm:inset-x-[12%] top-[33%] bottom-[25%]",
   },
 ];
 
@@ -115,9 +115,9 @@ function CeremonyCard({
             className="w-full h-full object-cover object-center block transition-transform duration-500 group-hover:scale-[1.02]"
           />
 
-          {/* Precise Overlay in designated artwork space */}
+          {/* Centered in the wide middle parchment space */}
           <div
-            className={`absolute ${c.overlayClasses} flex flex-col items-center justify-center text-center p-2 sm:p-3 select-none`}
+            className={`absolute ${c.overlayClasses} flex flex-col items-center justify-center text-center p-2 sm:p-4 select-none`}
           >
             {/* Auspicious Tag */}
             <p className="font-serif text-[11px] sm:text-xs md:text-sm tracking-[0.25em] text-accent font-bold uppercase drop-shadow-xs">
@@ -125,12 +125,12 @@ function CeremonyCard({
             </p>
 
             {/* Ceremony Title */}
-            <h3 className="mt-1 font-display text-lg sm:text-xl md:text-2xl leading-tight text-[#3d0d14] dark:text-amber-100 font-extrabold tracking-wide drop-shadow-xs">
+            <h3 className="mt-1 font-display text-base sm:text-lg md:text-xl leading-snug text-[#2c1015] font-extrabold tracking-wide drop-shadow-xs max-w-[17ch]">
               {c.name}
             </h3>
 
             {/* Golden Divider */}
-            <div className="my-1.5 sm:my-2 flex items-center justify-center gap-2 w-full max-w-[120px]" aria-hidden="true">
+            <div className="my-1.5 sm:my-2 flex items-center justify-center gap-2 w-full max-w-[110px]" aria-hidden="true">
               <span className="h-px flex-1 bg-primary/70" />
               <Sparkles className="h-2.5 w-2.5 text-primary shrink-0" />
               <span className="h-px flex-1 bg-primary/70" />
@@ -142,18 +142,18 @@ function CeremonyCard({
             </p>
 
             {/* Time */}
-            <p className="mt-0.5 font-serif text-[11px] sm:text-xs md:text-sm font-bold text-foreground">
+            <p className="mt-0.5 font-serif text-[11px] sm:text-xs md:text-sm font-bold text-[#2c1015]/90">
               {c.time}
             </p>
             {c.subTime && (
-              <p className="font-serif text-[10px] sm:text-[11px] md:text-xs font-semibold text-foreground/85">
+              <p className="font-serif text-[10px] sm:text-[11px] md:text-xs font-semibold text-[#2c1015]/80">
                 {c.subTime}
               </p>
             )}
 
             {/* Venue */}
-            <p className="mt-2 flex items-center justify-center gap-1.5 text-xs sm:text-sm font-bold text-foreground/90">
-              <MapPin className="h-3 w-3 text-primary shrink-0" />
+            <p className="mt-1.5 sm:mt-2 flex items-center justify-center gap-1.5 text-xs sm:text-sm font-bold text-[#2c1015]">
+              <MapPin className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-primary shrink-0" />
               <span>{c.venue}</span>
             </p>
           </div>
