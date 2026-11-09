@@ -390,14 +390,20 @@ function Index() {
         <section className="px-4 sm:px-6 py-10">
           <Reveal>
             <div className="mx-auto max-w-lg overflow-hidden rounded-2xl border border-primary/40 bg-card shadow-2xl">
-              <div className="relative aspect-[738/1040] w-full overflow-hidden bg-secondary/30">
+              <a
+                href={MAPS_URL}
+                target="_blank"
+                rel="noreferrer"
+                title="Open Sumangalam Resort in Google Maps"
+                className="block relative aspect-[738/1040] w-full overflow-hidden bg-secondary/30 group cursor-pointer"
+              >
                 <img
                   src={cardVenueLocation}
                   alt="Scenic mountain garden pavilion artwork for wedding location"
                   loading="lazy"
                   width={738}
                   height={1040}
-                  className="w-full h-full object-cover object-center block"
+                  className="w-full h-full object-cover object-center block transition-transform duration-500 group-hover:scale-[1.02]"
                 />
                 <div className="absolute inset-x-[8%] sm:inset-x-[12%] top-[24%] bottom-[32%] flex flex-col items-center justify-center text-center p-2 select-none">
                   <p className="font-serif text-xs sm:text-sm tracking-[0.3em] uppercase text-accent font-bold drop-shadow-xs">
@@ -417,8 +423,12 @@ function Index() {
                   <p className="mt-1 max-w-[32ch] text-xs sm:text-sm text-[#2c1015]/90 font-bold leading-relaxed">
                     Cordially Welcoming the Groom, Baarat &amp; Kasodhan Family at Sumangalam Resort
                   </p>
+                  <div className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-primary/50 bg-[#2c1015]/10 px-3.5 py-1 text-xs font-bold text-[#2c1015] shadow-xs backdrop-blur-xs">
+                    <MapPin className="h-3.5 w-3.5 text-primary" />
+                    <span>Tap for Directions ↗</span>
+                  </div>
                 </div>
-              </div>
+              </a>
 
               {/* Venue details and action bar */}
               <div className="border-t border-primary/20 bg-secondary/50 p-5 text-center sm:p-6">

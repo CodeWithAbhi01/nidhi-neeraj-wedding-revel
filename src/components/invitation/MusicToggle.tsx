@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
-import musicAsset from "@/assets/wedding-song.mp3.asset.json";
+import weddingSong from "@/assets/wedding-song.mp3";
 import { cn } from "@/lib/utils";
 
 /**
- * Floating background shehnai/wedding-music toggle.
+ * Floating background wedding music toggle ("Tum Tak").
  * Playback starts softly as soon as the invitation has been opened.
  */
 export default function MusicToggle({
@@ -19,19 +19,25 @@ export default function MusicToggle({
   const userMutedRef = useRef(false);
 
   useEffect(() => {
-    // Prefer direct static asset path /wedding-song.mp3 with fallback to asset json url
-    const songUrl = "/wedding-song.mp3";
+    // Correct base-aware URL for both local dev & GitHub Pages
+    const baseUrl = import.meta.env.BASE_URL || "/";
+    const publicFallback = `${baseUrl.endsWith("/") ? baseUrl : baseUrl + "/"}wedding-song.mp3`;
+    const songUrl = weddingSong || publicFallback;
+
     const audio = new Audio(songUrl);
     audio.loop = true;
-    audio.volume = 0.45;
+    audio.volume = 0.5;
     audioRef.current = audio;
 
     audio.onerror = () => {
-      if (musicAsset?.url && audio.src !== musicAsset.url && musicAsset.url !== songUrl) {
-        audio.src = musicAsset.url;
+      if (audio.src !== publicFallback) {
+        audio.src = publicFallback;
         audio.load();
       }
     };
+
+    audio.onplay = () => setPlaying(true);
+    audio.onpause = () => setPlaying(false);
 
     return () => {
       audio.pause();
@@ -49,7 +55,7 @@ export default function MusicToggle({
       .play()
       .then(() => setPlaying(true))
       .catch((err) => {
-        console.warn("Autoplay deferred until next touch/click interaction:", err);
+        console.warn("Autoplay deferred until user interaction:", err);
         setPlaying(false);
       });
   }, [start, pausedByModal]);
@@ -88,10 +94,12 @@ export default function MusicToggle({
 
     window.addEventListener("click", handleFirstTouch, { passive: true });
     window.addEventListener("touchstart", handleFirstTouch, { passive: true });
+    window.addEventListener("pointerdown", handleFirstTouch, { passive: true });
 
     return () => {
       window.removeEventListener("click", handleFirstTouch);
       window.removeEventListener("touchstart", handleFirstTouch);
+      window.removeEventListener("pointerdown", handleFirstTouch);
     };
   }, [start, pausedByModal]);
 
@@ -145,7 +153,7 @@ export default function MusicToggle({
           </span>
           <Volume2 className="h-4 w-4 text-accent" aria-hidden="true" />
           <span className="hidden sm:inline text-[11px] font-semibold text-accent uppercase tracking-wider">
-            Shehnai
+            Music
           </span>
         </>
       ) : (
