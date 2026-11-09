@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Play } from "lucide-react";
 import { cn } from "@/lib/utils";
-import introVideo from "@/assets/intro-video.mp4.asset.json";
+import introVideo from "@/assets/intro-video.mp4";
 
 interface IntroOverlayProps {
   onOpened: () => void;
@@ -110,7 +110,7 @@ export default function IntroOverlay({
       <div className="relative h-full w-full flex items-center justify-center p-0 sm:p-4">
         <video
           ref={videoRef}
-          src={introVideo.url}
+          src={introVideo}
           className="w-full h-auto max-h-[100dvh] max-w-full aspect-video object-contain drop-shadow-2xl transition-transform duration-500"
           playsInline
           webkit-playsinline="true"

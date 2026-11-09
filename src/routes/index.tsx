@@ -24,7 +24,7 @@ import CeremonySection from "@/components/invitation/CeremonySection";
 import cardShadi from "@/assets/card-shadi.jpg";
 import cardVenueLocation from "@/assets/card-venue-location.jpg";
 import cardRegardsFormal from "@/assets/card-regards-formal.jpg";
-import introVideo from "@/assets/intro-video.mp4.asset.json";
+import introVideo from "@/assets/intro-video.mp4";
 import nnLogo from "@/assets/nn-logo.png";
 import closingCouplePhoto from "@/assets/closing-couple.jpg";
 import { cn } from "@/lib/utils";
@@ -699,7 +699,7 @@ function Index() {
           >
             <video
               ref={modalVideoRef}
-              src={introVideo.url}
+              src={introVideo}
               className="w-full h-auto max-h-[85dvh] aspect-video object-contain rounded-xl sm:rounded-2xl drop-shadow-2xl shadow-[0_20px_50px_rgba(20,40,70,0.3)]"
               playsInline
               webkit-playsinline="true"

@@ -8,8 +8,19 @@ process.env["LOVABLE_PREVIEW_HOST"] ||= "b9cde40f-60cb-450d-9735-b77c39e29646.lo
 
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+const basePath = process.env.BASE_PATH || "/nidhi-neeraj-wedding-revel";
+
 export default defineConfig({
+  vite: {
+    base: `${basePath}/`,
+  },
   tanstackStart: {
+    router: {
+      basepath: basePath,
+    },
+    spa: {
+      enabled: true,
+    },
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },

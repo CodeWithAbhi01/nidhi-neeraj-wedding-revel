@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 import cardMehndi from "@/assets/card-mehndi.jpg";
 import cardHaldiBride from "@/assets/card-haldi-bride.jpg";
 import cardShadi from "@/assets/card-shadi.jpg";
-import cardVidaai from "@/assets/card-vidaai.png.asset.json";
+import cardVidaai from "@/assets/card-vidaai.png";
 
 export type Ceremony = {
   id: string;
@@ -81,7 +81,7 @@ const CEREMONIES: Ceremony[] = [
     venue: "Sumangalam Resort",
     addressShort: "Gorakhpur, Uttar Pradesh",
     details: "Heartfelt Milni followed by loving blessings and emotional farewell as Nidhi embarks on her new journey with Neeraj.",
-    image: cardVidaai.url,
+    image: cardVidaai,
     mapsUrl: MAPS_URL,
     calendarUrl:
       "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Milni+and+Bidaai+-+Nidhi+weds+Neeraj&dates=20261207T070000/20261207T110000&details=Milni+and+Bidaai+ceremony+at+Sumangalam+Resort.&location=Sumangalam+Resort,+Gorakhpur",
