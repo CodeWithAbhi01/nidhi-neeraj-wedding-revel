@@ -38,7 +38,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "With the divine blessings of the Almighty, Shri Awadh Narayan Gupta cordially invites you to celebrate the wedding of beloved daughter Aayu. Nidhi Gupta with Chi. Neeraj Gupta on Sunday, 6 December 2026 at Sumangalam Resort, Gorakhpur.",
+          "With the divine blessings of the Almighty, Shri Awadh Narayan Gupta cordially invites you to celebrate the wedding of beloved daughter Nidhi Gupta with Neeraj Gupta on Sunday, 6 December 2026 at Sumangalam Resort, Gorakhpur.",
       },
       {
         property: "og:title",
@@ -325,7 +325,7 @@ function Index() {
               
               {/* Bride Details */}
               <p className="mt-5 font-display text-3xl sm:text-4xl text-foreground font-extrabold tracking-wide">
-                Aayu. Nidhi Gupta
+                Nidhi Gupta
               </p>
               <p className="mt-1.5 text-xs sm:text-sm text-muted-foreground font-medium">
                 Granddaughter of Late Smt. Kalpati Devi and Shri Shivprasad
@@ -353,7 +353,7 @@ function Index() {
 
               {/* Groom Details */}
               <p className="mt-2 font-display text-3xl sm:text-4xl text-foreground font-extrabold tracking-wide">
-                Chi. Neeraj Gupta
+                Neeraj Gupta
               </p>
               <p className="mt-1.5 text-xs sm:text-sm text-muted-foreground font-medium">
                 Son of Smt. Indira Devi and Shri Chandrabhan Kasodhan
