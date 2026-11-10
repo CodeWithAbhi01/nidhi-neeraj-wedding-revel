@@ -6,7 +6,6 @@ import {
   Sparkles,
   CalendarPlus,
   Play,
-  Film,
   Copy,
   Check,
   X,
@@ -24,7 +23,6 @@ import CeremonySection from "@/components/invitation/CeremonySection";
 import cardShadi from "@/assets/card-shadi.jpg";
 import cardVenueLocation from "@/assets/card-venue-location.jpg";
 import cardRegardsFormal from "@/assets/card-regards-formal.jpg";
-import introVideo from "@/assets/intro-video.mp4";
 import nnLogo from "@/assets/nn-logo.png";
 import closingCouplePhoto from "@/assets/closing-couple.jpg";
 import { cn } from "@/lib/utils";
@@ -75,11 +73,9 @@ function GoldDivider() {
 
 function Index() {
   const [opened, setOpened] = useState(false);
-  const [videoModalOpen, setVideoModalOpen] = useState(false);
-  const [copiedAddress, setCopiedAddress] = useState(false);
+    const [copiedAddress, setCopiedAddress] = useState(false);
 
-  const modalVideoRef = useRef<HTMLVideoElement | null>(null);
-
+  
   // Celebratory flower & gold confetti shower
   const triggerFlowerShower = () => {
     import("canvas-confetti").then(({ default: confetti }) => {
@@ -168,25 +164,8 @@ function Index() {
       {/* ── Direct Tap Intro Video Overlay ── */}
       <IntroOverlay onOpened={handleOpened} onStarted={() => {}} />
 
-      {/* ── Top Floating Controls (Music + Replay Film) ── */}
-      {opened && (
-        <div className="fixed top-4 right-4 z-40 flex items-center gap-2">
-          {/* Re-watch Video Button */}
-          <button
-            type="button"
-            onClick={() => setVideoModalOpen(true)}
-            aria-label="Watch invitation film again"
-            title="Watch Invitation Film"
-            className="flex items-center gap-1.5 rounded-full border border-primary/40 bg-card/90 px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-accent shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-secondary"
-          >
-            <Film className="h-4 w-4 text-accent" />
-            <span className="hidden sm:inline">Film</span>
-          </button>
-
-          {/* Background Shehnai Audio Toggle */}
-          <MusicToggle start={opened} pausedByModal={videoModalOpen} />
-        </div>
-      )}
+      {/* ── Top Floating Audio Toggle ── */}
+      {opened && <MusicToggle start={opened} />}
 
       {/* ── Floating "Pushp Varsha / Shower Flowers" Button ── */}
       {opened && (
@@ -253,14 +232,7 @@ function Index() {
 
             {/* Quick Interactive Actions below Hero Card */}
             <div className="mx-auto mt-6 flex max-w-lg flex-wrap items-center justify-center gap-2.5 px-2">
-              <button
-                type="button"
-                onClick={() => setVideoModalOpen(true)}
-                className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-card px-4 py-2 text-xs font-bold uppercase tracking-wider text-accent shadow-sm transition hover:bg-secondary hover:scale-102"
-              >
-                <Play className="h-3.5 w-3.5 fill-current" />
-                Watch Invitation Film
-              </button>
+              
               <a
                 href={WEDDING_CALENDAR_URL}
                 target="_blank"
@@ -671,40 +643,7 @@ function Index() {
         </footer>
       </main>
 
-      {/* ── POPUP VIDEO MODAL ── */}
-      {videoModalOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#8ab9e3] via-[#bde1fa] to-[#8bb9e2] transition-opacity duration-300 p-2 sm:p-6 h-[100dvh] w-full"
-          onClick={() => setVideoModalOpen(false)}
-          role="dialog"
-          aria-label="Invitation Video Player"
-        >
-          <button
-            type="button"
-            onClick={() => setVideoModalOpen(false)}
-            className="absolute top-[max(0.75rem,env(safe-area-inset-top))] right-[max(0.75rem,env(safe-area-inset-right))] z-50 flex items-center gap-1.5 rounded-full border border-white/60 bg-black/45 px-4 py-2 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-bold text-white shadow-2xl backdrop-blur-md transition hover:bg-black/65 hover:scale-105 active:scale-95"
-          >
-            <X className="h-4 w-4" />
-            <span>Close ✕</span>
-          </button>
-
-          <div
-            className="relative w-full max-w-4xl max-h-[85dvh] flex items-center justify-center"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <video
-              ref={modalVideoRef}
-              src={introVideo}
-              className="w-full h-auto max-h-[85dvh] aspect-video object-contain rounded-xl sm:rounded-2xl drop-shadow-2xl shadow-[0_20px_50px_rgba(20,40,70,0.3)]"
-              playsInline
-              webkit-playsinline="true"
-              x5-playsinline="true"
-              autoPlay
-              controls
-            />
-          </div>
-        </div>
-      )}
+      
     </div>
   );
 }
