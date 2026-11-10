@@ -402,25 +402,25 @@ function Index() {
                   height={1040}
                   className="w-full h-full object-cover object-center block transition-transform duration-500 group-hover:scale-[1.02]"
                 />
-                <div className="absolute inset-x-[8%] sm:inset-x-[12%] top-[24%] bottom-[32%] flex flex-col items-center justify-center text-center p-2 select-none">
-                  <p className="font-serif text-xs sm:text-sm tracking-[0.3em] uppercase text-accent font-bold drop-shadow-xs">
+                <div className="absolute inset-x-[6%] sm:inset-x-[10%] top-[15%] sm:top-[16%] bottom-[43%] sm:bottom-[45%] flex flex-col items-center justify-center text-center p-2 select-none">
+                  <p className="font-serif text-[10px] sm:text-xs tracking-[0.25em] uppercase text-accent font-bold drop-shadow-xs">
                     ॥ शुभ विवाह स्थल ॥
                   </p>
-                  <h2 className="mt-1 font-display text-xl sm:text-3xl md:text-4xl leading-tight text-[#2c1015] font-extrabold drop-shadow-xs max-w-[18ch]">
+                  <h2 className="mt-0.5 sm:mt-1 font-display text-xl sm:text-3xl md:text-4xl leading-tight text-[#2c1015] font-extrabold drop-shadow-xs max-w-[18ch]">
                     The Wedding Venue
                   </h2>
-                  <div className="my-2 flex items-center justify-center gap-2 w-28" aria-hidden="true">
+                  <div className="my-1 sm:my-1.5 flex items-center justify-center gap-2 w-24" aria-hidden="true">
                     <span className="h-px flex-1 bg-primary/70" />
                     <Sparkles className="h-3 w-3 text-primary" />
                     <span className="h-px flex-1 bg-primary/70" />
                   </div>
-                  <p className="font-serif text-sm sm:text-base md:text-lg font-bold tracking-wide text-accent drop-shadow-xs">
+                  <p className="font-serif text-xs sm:text-base md:text-lg font-bold tracking-wide text-accent drop-shadow-xs">
                     Sunday, 6 December 2026 · 7:00 PM
                   </p>
-                  <p className="mt-1 max-w-[32ch] text-xs sm:text-sm text-[#2c1015]/90 font-bold leading-relaxed">
+                  <p className="mt-0.5 sm:mt-1 max-w-[32ch] text-[11px] sm:text-xs md:text-sm text-[#2c1015] font-bold leading-snug">
                     Cordially Welcoming the Groom, Baarat &amp; Kasodhan Family at Sumangalam Resort
                   </p>
-                  <div className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-primary/50 bg-[#2c1015]/10 px-3.5 py-1 text-xs font-bold text-[#2c1015] shadow-xs backdrop-blur-xs">
+                  <div className="mt-2 sm:mt-2.5 inline-flex items-center gap-1.5 rounded-full border border-primary/50 bg-white/80 px-3.5 py-1 text-[11px] sm:text-xs font-bold text-[#2c1015] shadow-sm backdrop-blur-xs">
                     <MapPin className="h-3.5 w-3.5 text-primary" />
                     <span>Tap for Directions ↗</span>
                   </div>
@@ -486,15 +486,15 @@ function Index() {
                 />
                 
                 {/* Text inside the royal arch */}
-                <div className="absolute inset-x-[10%] sm:inset-x-[14%] top-[25%] bottom-[26%] flex flex-col items-center justify-between text-center p-3 sm:p-5 select-none">
+                <div className="absolute inset-x-[8%] sm:inset-x-[12%] top-[15%] sm:top-[16%] bottom-[43%] sm:bottom-[45%] flex flex-col items-center justify-center text-center p-2 sm:p-4 select-none">
                   <div>
-                    <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-accent font-bold">
+                    <p className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-accent font-bold">
                       ॥ सप्रेम स्नेह व आशीर्वाद ॥
                     </p>
-                    <h2 className="mt-1 font-display text-xl sm:text-2xl md:text-3xl text-[#2c1015] font-extrabold tracking-wide">
+                    <h2 className="mt-0.5 sm:mt-1 font-display text-xl sm:text-2xl md:text-3xl text-[#2c1015] font-extrabold tracking-wide">
                       With Best Regards
                     </h2>
-                    <div className="my-1.5 flex items-center justify-center gap-2 w-24 mx-auto" aria-hidden="true">
+                    <div className="my-1 sm:my-1.5 flex items-center justify-center gap-2 w-24 mx-auto" aria-hidden="true">
                       <span className="h-px flex-1 bg-primary/70" />
                       <Sparkles className="h-3 w-3 text-primary" />
                       <span className="h-px flex-1 bg-primary/70" />
@@ -502,20 +502,20 @@ function Index() {
                   </div>
 
                   {/* Highlighted Names from user message */}
-                  <div className="space-y-1.5 my-auto">
-                    <p className="font-serif text-lg sm:text-2xl font-bold text-[#2c1015]">
+                  <div className="space-y-1 sm:space-y-1.5 my-1 sm:my-1.5">
+                    <p className="font-serif text-base sm:text-xl md:text-2xl font-bold text-[#2c1015]">
                       Shri Awadh Narayan Gupta
                     </p>
-                    <p className="font-serif text-base sm:text-xl font-bold text-accent">
+                    <p className="font-serif text-sm sm:text-lg md:text-xl font-bold text-accent">
                       Nitin Awadh Narayan Gupta
                     </p>
-                    <p className="font-serif text-sm sm:text-base font-semibold text-[#2c1015]/90">
+                    <p className="font-serif text-xs sm:text-base font-semibold text-[#2c1015]/90">
                       Riya Awadh Narayan Gupta
                     </p>
                   </div>
 
                   {/* Family wishes note */}
-                  <div>
+                  <div className="mt-1 sm:mt-1.5">
                     <p className="text-xs sm:text-sm font-serif text-accent font-bold">
                       &amp; The Entire Gupta Family, Relatives &amp; Friends
                     </p>
