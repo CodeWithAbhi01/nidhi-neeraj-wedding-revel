@@ -25,6 +25,7 @@ export type Ceremony = {
 export const RESORT_MAPS_URL = "https://maps.app.goo.gl/24kTk6etZFMBeTXC6?g_st=awb";
 export const RESORT_ADDRESS =
   "SUMANGALAM RESORTS, Pathara Dhala, Rajiv Nagar Colony, Gorakhpur, Chakara Doim, Uttar Pradesh 273016";
+export const MEHNDI_MAPS_URL = "https://maps.app.goo.gl/1XwY2TRfKrX9AXDR9?g_st=awb";
 const MAPS_URL = RESORT_MAPS_URL;
 
 const CEREMONIES: Ceremony[] = [
@@ -39,7 +40,7 @@ const CEREMONIES: Ceremony[] = [
     details:
       "Intricate henna adornments, joyful sangeet melodies, and festive blessings for our beloved bride Nidhi.",
     image: cardMehndi,
-    mapsUrl: MAPS_URL,
+    mapsUrl: MEHNDI_MAPS_URL,
     calendarUrl:
       "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Shubh+Mehndi+Ceremony+-+Nidhi+weds+Neeraj&dates=20261204T170000/20261204T220000&details=Shubh+Mehndi+Ceremony+at+Bride%27s+Residence.+Celebrations+begin+at+5:00+PM.&location=Bride%27s+Residence,+Gorakhpur",
     overlayClasses: "inset-x-[10%] sm:inset-x-[14%] top-[27%] bottom-[35%]",
