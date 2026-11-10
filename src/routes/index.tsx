@@ -298,9 +298,6 @@ function Index() {
             <p className="mt-4 text-xs uppercase tracking-[0.25em] text-muted-foreground font-semibold">
               ✦ Scratch the golden foil to reveal the live countdown ✦
             </p>
-            <p className="mt-3 text-sm sm:text-base text-foreground/85 font-semibold">
-              Mehndi: 4 Dec · Haldi &amp; Wedding: 6 Dec · Sumangalam Resort, Gorakhpur
-            </p>
           </Reveal>
         </section>
 
