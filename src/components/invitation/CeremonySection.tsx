@@ -22,7 +22,10 @@ export type Ceremony = {
   overlayClasses: string;
 };
 
-const MAPS_URL = "https://goo.gl/maps/YNSL899qGM232YQ28?g_st=awb";
+export const RESORT_MAPS_URL = "https://maps.app.goo.gl/24kTk6etZFMBeTXC6?g_st=awb";
+export const RESORT_ADDRESS =
+  "SUMANGALAM RESORTS, Pathara Dhala, Rajiv Nagar Colony, Gorakhpur, Chakara Doim, Uttar Pradesh 273016";
+const MAPS_URL = RESORT_MAPS_URL;
 
 const CEREMONIES: Ceremony[] = [
   {
@@ -48,12 +51,12 @@ const CEREMONIES: Ceremony[] = [
     date: "Sunday, 6 December 2026",
     time: "Morning, 10:00 AM onwards",
     venue: "Sumangalam Resort",
-    addressShort: "Transport Nagar, Pathra Tola, Shivpuri New Colony, Gorakhpur",
+    addressShort: RESORT_ADDRESS,
     details: "Sacred turmeric blessings, traditional songs, and cheerful pre-wedding celebrations.",
     image: cardHaldiBride,
     mapsUrl: MAPS_URL,
     calendarUrl:
-      "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Auspicious+Haldi+Ceremony+-+Nidhi+weds+Neeraj&dates=20261206T100000/20261206T140000&details=Auspicious+Haldi+Ceremony+at+Sumangalam+Resort.&location=Sumangalam+Resort,+Transport+Nagar,+Pathra+Tola,+Shivpuri+New+Colony,+Gorakhpur",
+      "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Auspicious+Haldi+Ceremony+-+Nidhi+weds+Neeraj&dates=20261206T100000/20261206T140000&details=Auspicious+Haldi+Ceremony+at+Sumangalam+Resort.&location=SUMANGALAM+RESORTS%2C+Pathara+Dhala%2C+Rajiv+Nagar+Colony%2C+Gorakhpur%2C+Chakara+Doim%2C+Uttar+Pradesh+273016",
     overlayClasses: "inset-x-[10%] sm:inset-x-[14%] top-[27%] bottom-[35%]",
   },
   {
@@ -64,12 +67,12 @@ const CEREMONIES: Ceremony[] = [
     time: "Evening & Night (Shubh Lagna)",
     subTime: "Baarat Reception & Varmala: 7:00 PM onwards",
     venue: "Sumangalam Resort",
-    addressShort: "Transport Nagar, Pathra Tola, Shivpuri New Colony, Gorakhpur",
+    addressShort: RESORT_ADDRESS,
     details: "Grand reception of the Baarat, auspicious Varmala, and sacred nuptial vows around the holy agni.",
     image: cardShadi,
     mapsUrl: MAPS_URL,
     calendarUrl:
-      "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Ceremony+%26+Sacred+Pheras+-+Nidhi+weds+Neeraj&dates=20261206T190000/20261207T040000&details=Wedding+ceremony+and+sacred+pheras+of+Nidhi+and+Neeraj.&location=Sumangalam+Resort,+Transport+Nagar,+Pathra+Tola,+Shivpuri+New+Colony,+Gorakhpur",
+      "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Ceremony+%26+Sacred+Pheras+-+Nidhi+weds+Neeraj&dates=20261206T190000/20261207T040000&details=Wedding+ceremony+and+sacred+pheras+of+Nidhi+and+Neeraj.&location=SUMANGALAM+RESORTS%2C+Pathara+Dhala%2C+Rajiv+Nagar+Colony%2C+Gorakhpur%2C+Chakara+Doim%2C+Uttar+Pradesh+273016",
     overlayClasses: "inset-x-[10%] sm:inset-x-[14%] top-[27%] bottom-[35%]",
   },
   {
@@ -78,8 +81,8 @@ const CEREMONIES: Ceremony[] = [
     devanagariTag: "॥ मिलनी एवं विदाई ॥",
     date: "Monday, 7 December 2026",
     time: "Morning",
-    venue: "Sumangalam Resort",
-    addressShort: "Gorakhpur, Uttar Pradesh",
+    venue: "Sumangalam Resorts",
+    addressShort: RESORT_ADDRESS,
     details: "Heartfelt Milni followed by loving blessings and emotional farewell as Nidhi embarks on her new journey with Neeraj.",
     image: cardVidaai,
     mapsUrl: MAPS_URL,

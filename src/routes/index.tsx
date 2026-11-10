@@ -54,10 +54,13 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const MAPS_URL = "https://goo.gl/maps/YNSL899qGM232YQ28?g_st=awb";
+export const RESORT_MAPS_URL = "https://maps.app.goo.gl/24kTk6etZFMBeTXC6?g_st=awb";
+export const RESORT_ADDRESS =
+  "SUMANGALAM RESORTS, Pathara Dhala, Rajiv Nagar Colony, Gorakhpur, Chakara Doim, Uttar Pradesh 273016";
+const MAPS_URL = RESORT_MAPS_URL;
 
 const WEDDING_CALENDAR_URL =
-  "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nidhi+weds+Neeraj+-+Shubh+Vivahotsav&dates=20261206T180000/20261207T040000&details=Grand+wedding+celebration+of+Nidhi+Gupta+and+Neeraj+Gupta.+Baarat+reception+and+Varmala+at+7:00+PM.&location=Sumangalam+Resort,+Transport+Nagar,+Pathra+Tola,+Shivpuri+New+Colony,+Gorakhpur,+Uttar+Pradesh";
+  "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nidhi+weds+Neeraj+-+Shubh+Vivahotsav&dates=20261206T180000/20261207T040000&details=Grand+wedding+celebration+of+Nidhi+Gupta+and+Neeraj+Gupta.+Baarat+reception+and+Varmala+at+7:00+PM.&location=SUMANGALAM+RESORTS%2C+Pathara+Dhala%2C+Rajiv+Nagar+Colony%2C+Gorakhpur%2C+Chakara+Doim%2C+Uttar+Pradesh+273016";
 
 const PHONES = ["+91 9967662018", "+91 9920806387"];
 
@@ -111,9 +114,7 @@ function Index() {
   };
 
   const copyResortAddress = () => {
-    navigator.clipboard.writeText(
-      "Sumangalam Resort, Transport Nagar, Pathra Tola, Shivpuri New Colony, Gorakhpur, Uttar Pradesh"
-    );
+    navigator.clipboard.writeText(RESORT_ADDRESS);
     setCopiedAddress(true);
     toast.success("Venue address copied to clipboard!");
     window.setTimeout(() => setCopiedAddress(false), 2500);
@@ -404,10 +405,10 @@ function Index() {
                 <div className="rounded-xl border border-primary/30 bg-card p-4 shadow-sm">
                   <p className="flex items-center justify-center gap-1.5 text-base sm:text-lg font-bold text-foreground">
                     <MapPin className="h-4 w-4 text-primary" aria-hidden="true" />
-                    Sumangalam Resort, Gorakhpur
+                    Sumangalam Resorts, Gorakhpur
                   </p>
                   <p className="mt-1 text-xs sm:text-sm leading-relaxed text-muted-foreground font-medium">
-                    Transport Nagar, Pathra Tola, Shivpuri New Colony, Gorakhpur, Uttar Pradesh
+                    {RESORT_ADDRESS}
                   </p>
                   <div className="mt-4 flex flex-wrap items-center justify-center gap-2.5">
                     <a
