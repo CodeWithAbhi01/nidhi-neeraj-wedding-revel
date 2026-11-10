@@ -489,7 +489,7 @@ function Index() {
                 />
                 
                 {/* Text inside the royal arch */}
-                <div className="absolute inset-x-[10%] sm:inset-x-[14%] top-[25%] bottom-[22%] flex flex-col items-center justify-between text-center p-3 sm:p-5 select-none">
+                <div className="absolute inset-x-[10%] sm:inset-x-[14%] top-[25%] bottom-[26%] flex flex-col items-center justify-between text-center p-3 sm:p-5 select-none">
                   <div>
                     <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-accent font-bold">
                       ॥ सप्रेम स्नेह व आशीर्वाद ॥
@@ -517,13 +517,10 @@ function Index() {
                     </p>
                   </div>
 
-                  {/* Sibling bond note */}
+                  {/* Family wishes note */}
                   <div>
-                    <p className="text-[10px] sm:text-xs uppercase tracking-wider text-[#2c1015]/80 font-bold">
-                      Forever siblings, forever together
-                    </p>
-                    <p className="text-[10px] sm:text-xs font-serif text-accent font-bold mt-1">
-                      &amp; The Entire Kasodhan Family, Relatives &amp; Friends
+                    <p className="text-xs sm:text-sm font-serif text-accent font-bold">
+                      &amp; The Entire Gupta Family, Relatives &amp; Friends
                     </p>
                   </div>
                 </div>
