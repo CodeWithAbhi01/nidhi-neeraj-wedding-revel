@@ -54,7 +54,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-export const RESORT_MAPS_URL = "https://maps.app.goo.gl/24kTk6etZFMBeTXC6?g_st=awb";
+export const RESORT_MAPS_URL = "https://maps.app.goo.gl/TnEuLrStvfmMofZb6";
 export const RESORT_ADDRESS =
   "SUMANGALAM RESORTS, Pathara Dhala, Rajiv Nagar Colony, Gorakhpur, Chakara Doim, Uttar Pradesh 273016";
 const MAPS_URL = RESORT_MAPS_URL;
