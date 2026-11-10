@@ -588,37 +588,29 @@ function Index() {
         {/* ── Closing: The Couple ──────────────────────────────────────────── */}
         <section className="px-4 sm:px-6 pb-12 pt-6">
           <Reveal>
-            <div className="mx-auto max-w-xl overflow-hidden rounded-3xl border-2 border-primary/50 bg-gradient-to-b from-card via-card to-secondary/40 p-4 sm:p-7 shadow-2xl relative">
-              <div className="text-center mb-5 sm:mb-6">
-                <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-secondary/80 px-4 py-1 text-[11px] sm:text-xs font-bold uppercase tracking-[0.25em] text-accent shadow-xs">
-                  <Sparkles className="h-3.5 w-3.5 text-primary" />
-                  <span>TOGETHER FOREVER</span>
-                  <Sparkles className="h-3.5 w-3.5 text-primary" />
-                </div>
-                <h2 className="mt-3 font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground tracking-wide">
-                  A Beautiful Journey Begins
+            <div className="mx-auto max-w-lg text-center">
+              <div className="mb-5 sm:mb-6">
+                <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2c1015] tracking-wide">
+                  Nidhi &amp; Neeraj
                 </h2>
-                <p className="mt-1.5 font-serif text-sm sm:text-base text-accent font-semibold tracking-wide">
+                <p className="mt-2 font-serif text-sm sm:text-base text-accent font-semibold tracking-wide">
                   Walking into a lifetime of love, laughter &amp; togetherness
                 </p>
-                <div className="mx-auto mt-2.5 flex items-center justify-center gap-2 w-28" aria-hidden="true">
-                  <span className="h-px flex-1 bg-primary/60" />
-                  <Heart className="h-3 w-3 text-accent fill-accent" />
-                  <span className="h-px flex-1 bg-primary/60" />
-                </div>
               </div>
 
-              {/* Masterpiece Couple Artwork */}
+              {/* Original Couple Photograph */}
               <div 
-                className="group relative overflow-hidden rounded-2xl border border-primary/40 shadow-2xl bg-secondary/30 cursor-pointer"
+                className="group relative overflow-hidden rounded-2xl shadow-2xl bg-card cursor-pointer border border-primary/30"
                 onClick={triggerFlowerShower}
-                title="Tap anywhere to shower blessings!"
+                title="Tap to shower blessings!"
               >
                 <img
                   src={closingCouplePhoto}
-                  alt="Nidhi and Neeraj Wedding Invitation Artwork"
+                  alt="Nidhi and Neeraj"
                   loading="lazy"
-                  className="h-auto w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.015]"
+                  width={681}
+                  height={1024}
+                  className="h-auto w-full object-cover block transition-transform duration-500 group-hover:scale-[1.01]"
                 />
               </div>
 
@@ -627,7 +619,7 @@ function Index() {
                 <button
                   type="button"
                   onClick={triggerFlowerShower}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent via-rose-700 to-accent px-6 py-3 text-xs sm:text-sm font-semibold uppercase tracking-wider text-accent-foreground shadow-lg transition hover:scale-105 active:scale-95 hover:shadow-xl cursor-pointer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-xs sm:text-sm font-semibold uppercase tracking-wider text-accent-foreground shadow-lg transition hover:scale-105 active:scale-95 cursor-pointer"
                 >
                   <Sparkles className="h-4 w-4 text-amber-300" />
                   <span>Shower Blessings</span>
@@ -637,13 +629,12 @@ function Index() {
                 <button
                   type="button"
                   onClick={shareInvitation}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-primary/50 bg-secondary px-5 py-3 text-xs sm:text-sm font-semibold text-secondary-foreground shadow-sm transition hover:bg-primary hover:text-primary-foreground hover:scale-102 cursor-pointer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-primary/50 bg-card px-5 py-3 text-xs sm:text-sm font-semibold text-foreground shadow-sm transition hover:bg-secondary hover:scale-102 cursor-pointer"
                 >
                   <Share2 className="h-4 w-4 text-accent" />
                   <span>Share Invitation</span>
                 </button>
               </div>
-
             </div>
           </Reveal>
         </section>
