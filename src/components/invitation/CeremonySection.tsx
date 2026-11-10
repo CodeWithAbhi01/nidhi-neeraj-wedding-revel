@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 import cardMehndi from "@/assets/card-mehndi.jpg";
 import cardHaldiBride from "@/assets/card-haldi-bride.jpg";
 import cardShadi from "@/assets/card-shadi.jpg";
-import cardVidaai from "@/assets/card-vidaai.png";
+import cardVidaai from "@/assets/card-vidaai.jpg";
 
 export type Ceremony = {
   id: string;
@@ -85,7 +85,7 @@ const CEREMONIES: Ceremony[] = [
     mapsUrl: MAPS_URL,
     calendarUrl:
       "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Milni+and+Bidaai+-+Nidhi+weds+Neeraj&dates=20261207T070000/20261207T110000&details=Milni+and+Bidaai+ceremony+at+Sumangalam+Resort.&location=Sumangalam+Resort,+Gorakhpur",
-    overlayClasses: "inset-x-[8%] sm:inset-x-[12%] top-[33%] bottom-[25%]",
+    overlayClasses: "inset-x-[6%] sm:inset-x-[10%] top-[15%] sm:top-[16%] bottom-[43%] sm:bottom-[45%]",
   },
 ];
 
